@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Who let the cows out?</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://www.openlayers.org/api/theme/default/style.css">
+    <style type="text/css">
+        html, body { height: 100%; width: 100%; }
+        #map { height: 70%; }
+        #chart { height: 30%; }
+        .table>thead>tr>th { padding: 4px; }
+        .table { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container-fluid" style="height: 100%;">
+        <div class="row" style="height:100%">
+            <div class="col-md-2 pre-scrollable" style="max-height: 100%">
+                <div class="row">
+                    <table class="table table-hover">
+                        <thead><th><h4 class="text-center">Cattle list</h4></th></thead>
+                        <tbody id="cow_datasources"></tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <table class="table table-hover">
+                        <thead>
+                            <th><h4 class="text-center">Cattle info</h4></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Name:</strong><br/>
+                                    <span id="name-box"> </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>ID:</strong><br />
+                                    <span id="id-box"> </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Breed:</strong><br />
+                                    <span id="breed-box"> </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Age:</strong><br />
+                                    <span id="age-box"> </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Vaccines:</strong><br />
+                                    <span id="vaccines-box"> </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Comments:</strong><br />
+                                    <span id="comments-box"> </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <table class="table table-hover">
+                        <thead>
+                            <th>
+                                <h4 class="text-center">Device info</h4>
+                            </th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Battery level</strong><br/>
+                                    <span id="battery-box"> </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-10" id="map"></div>
+            <div class="col-md-10" id="chart"></div>
+        </div>
+    </div>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+    <script src="http://maps.google.com/maps/api/js?v=3&amp;sensor=false"></script>
+    <script src="cattle_connection.js"></script>
+</body>
+</html>

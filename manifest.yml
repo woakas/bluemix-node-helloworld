@@ -1,6 +1,6 @@
 ---
 applications:
-- name: helloworld-nn
-  host: helloworld-nn
+- name: hello-worldnode-test
+  host: hello-worldnode-test
   memory: 128M
   command: node main.js
