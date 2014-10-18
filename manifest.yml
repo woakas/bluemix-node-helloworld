@@ -1,0 +1,6 @@
+---
+applications:
+- name: helloworld-nn
+  host: helloworld-nn
+  memory: 128M
+  command: node main.js
